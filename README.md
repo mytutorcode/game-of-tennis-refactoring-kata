@@ -1,4 +1,4 @@
-# Refactoring-Kata
+# Game of Tennis refactoring Kata
 
 This is a working-ish application for a game of Tennis.
 
