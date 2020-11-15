@@ -41,14 +41,15 @@ For the sake of simplicity, we are only implementing the scoring for a single se
 
 ### Example 2 - "Deuce"
 
-| Bob | Sarah | Result       | Game        |
-|-----|-------|--------------|-------------|
-| 0   | 0     | Sarah scores | -           |
-| 0   | 15    | Bob scores   | -           |
-| 15  | 15    | Sarah scores | -           |
-| 15  | 30    | Sarah scores | -           |
-| 15  | 40    | Sarah scores | -           |
-| 15  | x     | Sarah scores | Sarah wins  |
+| Bob | Sarah | Result       | Game              |
+|-----|-------|--------------|-------------------|
+| 0   | 0     | Bob scores   | -                 |
+| 15  | 0     | Bob scores   | -                 |
+| 30  | 0     | Sarah scores | -                 |
+| 30  | 15    | Sarah scores | -                 |
+| 30  | 30    | Sarah scores | -                 |
+| 30  | 40    | Bob scores   | -                 |
+| 40  | 40    |              | (deuce)           |
 
 # Application Overview
 
