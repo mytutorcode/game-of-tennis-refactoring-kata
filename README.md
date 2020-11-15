@@ -37,7 +37,7 @@ For the sake of simplicity, we are only implementing the scoring for a single se
 | 15  | 15    | Sarah scores | -           |
 | 15  | 30    | Sarah scores | -           |
 | 15  | 40    | Sarah scores | -           |
-| 15  | x     | Sarah scores | Sarah wins  |
+| 15  | x     |              | Sarah wins  |
 
 ### Example 2 - "Deuce"
 
