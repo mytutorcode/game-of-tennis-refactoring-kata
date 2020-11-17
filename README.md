@@ -1,16 +1,20 @@
 # Game of Tennis Refactoring Kata
 
+# Time Limit
+
+1 hour (60 mins)
+
 # Situation
 
-The Wimbledon Tennis Company contracted a freelance software developer to create a tennis scoring application.
+The Wimbledon Tennis Company employed a software developer to create a tennis scoring application.
 
 Unfortunately the developer has been stranded on vacation in a remote area with no internet connection.
 
 The Wimbledon Tennis Company needs the application to be deployed to production as soon as possible!
 
-You have been hired to evaluate the codebase of this application and make any necessary changes to it.
+You have been hired by the company to evaluate the codebase of this application and make any necessary changes to it.
 
-The desired outcome of this should be that the application functions and performs well to the specified business rules in production.
+The desired outcome of this should be that the application functions and performs to the specified business requirements.
 
 # Business Rules 
 
@@ -53,8 +57,10 @@ For the sake of simplicity, we are only implementing the scoring for a single se
 
 # Application Overview
 
-The application is built with *Spring Boot* and provide a single RESTful endpoint to score and report back the score for a given Game of Tennis.
+The application is built with **Spring Boot** and provides a single RESTful endpoint to score and report back the score for a given Game of Tennis.
 
 The application also sends the score of the game to be displayed on a scoreboard seen by the audience.
+
+There is no Database or other persistence being used by the application.
 
 
