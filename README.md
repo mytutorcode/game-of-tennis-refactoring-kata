@@ -8,9 +8,7 @@
 
 The Wimbledon Tennis Company employed a software developer to create a tennis scoring application.
 
-Unfortunately the developer has been stranded on vacation in a remote area with no internet connection.
-
-The Wimbledon Tennis Company needs the application to be deployed to production as soon as possible!
+Unfortunately, the developer has taken a new job before the application could be declared finished.
 
 You have been hired by the company to evaluate the codebase of this application and make any necessary changes to it.
 
