@@ -22,7 +22,7 @@ The application uses the standard scoring rules for Tennis.
 - 1 point scored = 15 points
 - 2 points scored = 30 points
 - 3 points scored = 40 points
-- 4 points earned = set point (set over)
+- 4 points earned = Game point
 
 For a tennis player to win a game, he/she must win with at least a two point lead.
 
