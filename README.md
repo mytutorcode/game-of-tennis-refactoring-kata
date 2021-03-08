@@ -18,20 +18,6 @@ The desired outcome of this should be that the application functions and perform
 
 The application uses the standard scoring rules for Tennis. 
 
-- No points are scored = Love
-- 1 point scored = 15 points
-- 2 points scored = 30 points
-- 3 points scored = 40 points
-- 4 points earned = Game point
-
-For a tennis player to win a game, he/she must win with at least a two point lead.
-
-If the score is tied at 40 to 40 (what is called as a Deuce), a player must earn two consecutive points (an Advantage point and Point) to win the game. If the player who has an Advantage point loses the next point, the score will be Deuce once again.
-
-For the sake of simplicity, we are only implementing the scoring of **one** game.
-
-A game is won by the first player to reach 40 points (score 4 times)
-
 | Points | Description |
 |--------|-------------|
 | 0      | Love        |
@@ -39,6 +25,14 @@ A game is won by the first player to reach 40 points (score 4 times)
 | 2      | Thirty      |
 | 3      | Forty       |
 | 4      | Win         |
+
+For a tennis player to win a game, they must win with at least a two point lead.
+
+If the score is tied at 40 to 40 (what is called as a Deuce), a player must earn two consecutive points (an Advantage point and Point) to win the game. 
+
+If the player who has an Advantage point loses the next point, then it reverts back to Deuce once again.
+
+For the sake of simplicity, we are only implementing the scoring of **one** game.
 
 ### Example 1 - "Sarah wins"
 
@@ -49,11 +43,9 @@ A game is won by the first player to reach 40 points (score 4 times)
 | 15  | 15    | Sarah scores | Fifteen-All    |
 | 15  | 30    | Sarah scores | Fifteen-Thirty |
 | 15  | 40    | Sarah scores | Fifteen-Forty  |
-| 15  | x     |              | Sarah wins     |
+| 15  | Win   |              | Win for Sarah  |
 
 ### Example 2 - "Deuce"
-
-If both players reach 40, the output is Deuce.
 
 | Bob | Sarah | Result       | Output            |
 |-----|-------|--------------|-------------------|
@@ -65,7 +57,7 @@ If both players reach 40, the output is Deuce.
 | 30  | 40    | Bob scores   | Thirty-Forty      |
 | 40  | 40    |              | Deuce             |
 
-### Example 2 - "Advantage"
+### Example 3 - "Advantage"
 
 Advantage occurs when both players are at Deuce and one player scores, resulting in them having an advantage.
 
