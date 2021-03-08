@@ -28,30 +28,55 @@ For a tennis player to win a game, he/she must win with at least a two point lea
 
 If the score is tied at 40 to 40 (what is called as a Deuce), a player must earn two consecutive points (an Advantage point and Point) to win the game. If the player who has an Advantage point loses the next point, the score will be Deuce once again.
 
-For the sake of simplicity, we are only implementing the scoring for a single set (game) as opposed to a complete set or a match.
+For the sake of simplicity, we are only implementing the scoring of **one** game.
+
+A game is won by the first player to reach 40 points (score 4 times)
+
+| Points | Description |
+|--------|-------------|
+| 0      | Love        |
+| 1      | Fifteen     |
+| 2      | Thirty      |
+| 3      | Forty       |
+| 4      | Win         |
 
 ### Example 1 - "Sarah wins"
 
-| Bob | Sarah | Action       | Game        |
-|-----|-------|--------------|-------------|
-| 0   | 0     | Sarah scores | -           |
-| 0   | 15    | Bob scores   | -           |
-| 15  | 15    | Sarah scores | -           |
-| 15  | 30    | Sarah scores | -           |
-| 15  | 40    | Sarah scores | -           |
-| 15  | x     |              | Sarah wins  |
+| Bob | Sarah | Action       | Output         |
+|-----|-------|--------------|----------------|
+| 0   | 0     | Sarah scores | Love-All       |
+| 0   | 15    | Bob scores   | Love-Fifteen   |
+| 15  | 15    | Sarah scores | Fifteen-All    |
+| 15  | 30    | Sarah scores | Fifteen-Thirty |
+| 15  | 40    | Sarah scores | Fifteen-Forty  |
+| 15  | x     |              | Sarah wins     |
 
 ### Example 2 - "Deuce"
 
-| Bob | Sarah | Result       | Game              |
+If both players reach 40, the output is Deuce.
+
+| Bob | Sarah | Result       | Output            |
 |-----|-------|--------------|-------------------|
-| 0   | 0     | Bob scores   | -                 |
-| 15  | 0     | Bob scores   | -                 |
-| 30  | 0     | Sarah scores | -                 |
-| 30  | 15    | Sarah scores | -                 |
-| 30  | 30    | Sarah scores | -                 |
-| 30  | 40    | Bob scores   | -                 |
-| 40  | 40    |              | (deuce)           |
+| 0   | 0     | Bob scores   | Love-All          |
+| 15  | 0     | Bob scores   | Fifteen-Love      |
+| 30  | 0     | Sarah scores | Thirty-Love       |
+| 30  | 15    | Sarah scores | Thirty-Fifteen    |
+| 30  | 30    | Sarah scores | Thirty-All        |
+| 30  | 40    | Bob scores   | Thirty-Forty      |
+| 40  | 40    |              | Deuce             |
+
+### Example 2 - "Advantage"
+
+Advantage occurs when both players are at Deuce and one player scores, resulting in them having an advantage.
+
+If they score again, they win.
+
+| Bob | Sarah | Result       | Output              |
+|-----|-------|--------------|---------------------|
+| 40  | 40    | Sarah score  | Deuce               |
+| 40  | Adv   | Sarah scores | Advantage for Sarah |
+| 40  | Win   |              | Win for Sarah       |
+
 
 # Application Overview
 
